@@ -1,0 +1,104 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;   
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body > .main{
+    background-color: #F7F2E0;
+    margin-left: 25%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.aside{
+    position: fixed;
+    background-color: #F7F2E0;
+    grid-area: "side";
+    height: 100%;
+    width: 25%;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 200px auto 100px;
+    grid-template-areas: "logo"
+                         "menu"
+                         "footer";
+}
+
+.logo{
+    margin-top: 20px;
+    grid-area: "logo";
+    justify-self: center;
+    align-self: center;
+}
+
+.menu{
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+
+    grid-area: "menu";
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "inicio"
+                        "projetos"
+                        "serviços"
+                        "contato";
+    grid-row-gap: 5px;
+}
+
+body > .aside > .menu > a{
+    padding: 25px;
+}
+body > .aside > .menu > #inicio{
+    grid-area: "inicio";
+}
+
+body > .aside > .menu > #projetos{
+    grid-area: "projetos";  
+}
+
+body > .aside > .menu > #serviços{
+    grid-area: "serviços";   
+}
+
+body > .aside > .menu > #contato{
+    grid-area: "contato";
+}
+
+a{
+    color: #363636;
+    text-decoration: none;
+}
+
+body > .aside > .menu > a:hover{
+    background-color: #19070B;
+    color:white;
+    border: 2px solid white;  
+} 
+
+.footer{
+    grid-area: "footer";
+    text-align: center;
+}
+
+i {
+    font-size: 40px;
+    margin: 30px 20px;
+}

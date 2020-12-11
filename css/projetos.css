@@ -1,0 +1,173 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;   
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "side" "principal";    
+}
+
+.main{
+    grid-area: "principal";
+    background-color: #F7F2E0;
+    
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "centro" "praça"
+                         "escola" "interiores"
+                         "predio" "casas";
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+
+}
+
+body > .main > a{
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px black;
+    padding-bottom: 10px;
+    height: 100px;
+    width: 350px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: white;
+    background-color:#19070B;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body > .main > a:hover{
+    background-color: #F7F2E0;
+    color: #19070B;
+    border: 2px solid #19070B;  
+} 
+
+#centro-gastronomico > i{
+    grid-area: "centro";
+    margin: 10px;
+    font-size: 30px;
+}
+
+#escola > i{
+    grid-area: "escola";
+    margin: 10px;
+    font-size: 30px;
+}
+
+#predio > i{
+    grid-area: "predio";
+    margin: 10px;
+    font-size: 30px;
+}
+
+#praça > i{
+    grid-area: "praça";
+    margin: 10px;
+    font-size: 30px;
+}
+
+#interiores > i{
+    grid-area: "interiores";
+    margin: 15px;
+    font-size: 30px;
+}
+
+#casas > i{
+    grid-area: "casas";
+    margin: 15px;
+    font-size: 30px;
+}
+
+.aside{
+    background-color: #F7F2E0;
+    grid-area: "side";
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 200px auto 100px;
+    grid-template-areas: "logo"
+                         "menu"
+                         "footer";
+}
+
+.logo{
+    margin-top: 20px;
+    grid-area: "logo";
+    justify-self: center;
+    align-self: center;
+}
+
+.menu{
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+
+    grid-area: "menu";
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "inicio"
+                        "projetos"
+                        "serviços"
+                        "contato";
+    grid-row-gap: 5px;
+}
+
+body > .aside > .menu > a{
+    padding: 25px;
+}
+body > .aside > .menu > #inicio{
+    grid-area: "inicio";
+}
+
+body > .aside > .menu > #projetos{
+    grid-area: "projetos";  
+}
+
+body > .aside > .menu > #serviços{
+    grid-area: "serviços";   
+}
+
+body > .aside > .menu > #contato{
+    grid-area: "contato";
+}
+
+a{
+    color: #363636;
+    text-decoration: none;
+}
+
+body > .aside > .menu > a:hover{
+    background-color: #19070B;
+    color:white;
+    border: 2px solid white;  
+} 
+
+.footer{
+    grid-area: "footer";
+    text-align: center;
+}
+
+i {
+    font-size: 40px;
+    margin: 30px 20px;
+}
